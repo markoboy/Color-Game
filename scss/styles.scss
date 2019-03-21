@@ -1,0 +1,112 @@
+$color-primary: #fff;
+$color-secondary: #333;
+$color-blue: rgb(86, 86, 240);
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background-color: $color-secondary;
+  color: $color-primary;
+  text-align: center;
+  font: 18px/1.2 Arial, Helvetica, sans;
+  letter-spacing: 0.1rem;
+
+  .header {
+    text-transform: uppercase;
+    padding: 1rem;
+    background-color: $color-blue;
+    transition: background 0.2s ease-in;
+
+    &__heading {
+      font-size: 1.4rem;
+      margin: 0;
+    }
+
+    &__color {
+      font-size: 2rem;
+      margin: 0;
+    }
+  }
+
+  .navbar {
+    background-color: #f1f1f1;
+
+    &__wrapper {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    &__message {
+      &.success {
+        color: rgb(10, 138, 25);
+      }
+      &.failure {
+        color: rgb(140, 6, 6);
+      }
+    }
+  }
+
+  .colors {
+    max-width: 600px;
+    margin: 1rem auto;
+
+    &__picker {
+      width: 30%;
+      height: 20vh;
+      margin-bottom: 1rem;
+      transition: transform 0.2s ease-in, background 0.2s ease-in;
+      border-radius: 1rem;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  @at-root .btn {
+    color: $color-blue;
+    text-transform: uppercase;
+    font-weight: 700;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: inherit;
+    border: none;
+    transition: color 0.2s ease-in, background 0.2s ease-in;
+
+    &--navbar {
+      padding: 0.3rem 0.6rem;
+      letter-spacing: 0.1rem;
+
+      &:hover {
+        color: $color-primary;
+        background-color: $color-blue;
+      }
+
+      &.is-active {
+        color: $color-primary;
+        background-color: $color-blue;
+      }
+    }
+  }
+
+  @at-root .flex {
+    display: flex;
+    flex-flow: row nowrap;
+
+    &--row-wrap {
+      flex-flow: row wrap;
+    }
+
+    &.justify-content-space-between {
+      justify-content: space-between;
+    }
+
+    &.justify-content-space-around {
+      justify-content: space-around;
+    }
+  }
+}
